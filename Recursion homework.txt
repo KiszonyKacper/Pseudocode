@@ -1,0 +1,71 @@
+1.
+
+method REC(N)
+if (N<=1) then return 2
+else return REC(N-1)*0.5
+end if
+end method
+
+output REC(4)
+
+***************************
+//#save-spot
+
+fast(2)
+
+method fast(N)
+
+if (N mod 2 == 0) then
+output "I'm even number"
+else  if (N mod 2 == 1) then
+output "I'm uneven number"
+end if
+end method
+2.
+
+//100(0), 50(1), 101(2), 49(3), 102(4), 48(5), 103(6)
+
+******************************
+//#save-spot2
+
+output REC2(4)
+
+method REC2(N)
+if (N<=1) then return 100
+else if (N mod 2 == 0) then return REC2(N-1)-51
+else if (N mod 2 == 1) then return 101
+end if
+end method
+
+******************************
+//100(0), 50(1), 101(2), 49(3), 102(4), 48(5), 103(6)
+//-50,+51,-52,+53,-54,+55
+output REC2(6)
+
+method REC2(N)
+if (N<=0) then return 100
+else if (N mod 2 == 1) then return REC2(N-1)-49-N
+else if (N mod 2 == 0) then return REC2(N-1)+49+N
+end if
+end method
+
+
+
+3.
+// 1, 1, 2, 2, 4, 3, 8, 4, 16, 5, 32, 6
+
+********************************
+
+/#Attempt to get it done as previous one
+
+// 1, 1, 2, 2, 4, 3, 8, 4, 16, 5, 32, 6
+output REC3(2)
+
+method REC3(N)
+if (N<=0) then return 1
+else if (N mod 2 == 1) then return REC3(N-1)*N
+else if (N mod 2 == 0) then return REC3(N-1)+N/2
+end if
+end method
+
+********************************

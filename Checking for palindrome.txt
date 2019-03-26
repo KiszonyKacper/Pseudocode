@@ -1,0 +1,50 @@
+main()
+
+method check(word)
+
+half = (word.length/2) - 1
+
+loop i from 0 to half
+ if (word.charAt(i) == word.charAt(word.length-i)) then
+  return true
+ else if NOT (word.charAt(i) == word.charAt(word.length-i)) then
+  return false
+ end if
+ end loop
+
+end method
+
+method checkIfEven(word)
+if (word.length mod 2 = 0) then
+return true
+else
+return false
+end if
+end method
+
+
+method main()
+
+word = "abccba"
+
+checkIfEven(word)
+
+if (checkIfEven(word) == true) then
+ output "I'm even"
+else
+ output "I'm not even"
+end if
+
+if (check(word) == true) then
+ output "I'm palindrome"
+else if (check(word) == false) then 
+ output "I'm not palindrome"
+end if
+
+check(word)
+
+end method
+
+
+
+

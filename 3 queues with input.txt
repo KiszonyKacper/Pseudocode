@@ -1,0 +1,33 @@
+BUCKET1 = new Queue()
+BUCKET2 = new Queue()
+BUCKET3 = new Queue()
+
+loop COUNT from 0 to 6
+
+input NUMBER 
+
+
+if NUMBER<10 then
+BUCKET1.enqueue(NUMBER)
+
+
+else if number>100 then
+BUCKET3.enqueue(NUMBER)
+
+else
+BUCKET2.enqueue(NUMBER)
+
+end if
+end loop
+
+loop while NOT (BUCKET1.isEmpty())
+output BUCKET1.dequeue()
+end loop
+
+loop while NOT (BUCKET2.isEmpty())
+output BUCKET2.dequeue()
+end loop
+
+loop while NOT (BUCKET3.isEmpty())
+output BUCKET3.dequeue()
+end loop

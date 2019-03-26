@@ -1,0 +1,8 @@
+Q = new Queue()
+
+loop COUNT from 0 to 4 
+input NAME
+Q.enqueue(NAME)
+Q.dequeue(NAME)
+output NAME
+end loop
